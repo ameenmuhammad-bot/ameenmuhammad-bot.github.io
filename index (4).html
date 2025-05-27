@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Ameen's Portfolio - Graphic Design, Visual Communication & Creative Projects" />
+  <meta property="og:title" content="Muhammad Ameen - Portfolio" />
+  <meta property="og:description" content="Showcasing logo, flyer, banner, and merchandise design works." />
+  <meta property="og:type" content="website" />
+  <title>Muhammad Ameen - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #f4f4f5; color: #111827; line-height: 1.6; }
+    header {
+      background: #9333ea;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section, footer {
+      padding: 2rem;
+      text-align: center;
+    }
+    h2 {
+      color: #9333ea;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .gallery-grid a img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid a img:hover {
+      transform: scale(1.05);
+    }
+    @media (max-width: 600px) {
+      .gallery-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .reveal {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    footer {
+      background: #111827;
+      color: #f9fafb;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Muhammad Ameen</h1>
+    <p>Graphics Designer | Visual Communicator | Student Engineer</p>
+    <nav>
+      <a href="#logos">Logos</a>
+      <a href="#flyers">Flyers</a>
+      <a href="#banners">Banners</a>
+      <a href="#merch">Merch</a>
+    </nav>
+  </header>
+
+  <section id="logos">
+    <h2>Logo Designs</h2>
+    <div class="gallery-grid">
+      <a href="assets/images/logos/LOGO1.jpg" data-lightbox="logos"><img src="assets/images/logos/LOGO1.jpg" alt="Logo 1"></a>
+      <a href="assets/images/logos/LOGO2.jpg" data-lightbox="logos"><img src="assets/images/logos/LOGO2.jpg" alt="Logo 2"></a>
+      <a href="assets/images/logos/LOGO3.jpg" data-lightbox="logos"><img src="assets/images/logos/LOGO3.jpg" alt="Logo 3"></a>
+      <a href="assets/images/logos/LOGO4.jpg" data-lightbox="logos"><img src="assets/images/logos/LOGO4.jpg" alt="Logo 4"></a>
+    </div>
+  </section>
+
+  <section id="flyers">
+    <h2>Flyer Designs</h2>
+    <div class="gallery-grid">
+      <a href="assets/images/flyers/FLYER1.jpg" data-lightbox="flyers"><img src="assets/images/flyers/FLYER1.jpg" alt="Flyer 1"></a>
+      <a href="assets/images/flyers/FLYER2.jpg" data-lightbox="flyers"><img src="assets/images/flyers/FLYER2.jpg" alt="Flyer 2"></a>
+      <a href="assets/images/flyers/FLYER3.jpg" data-lightbox="flyers"><img src="assets/images/flyers/FLYER3.jpg" alt="Flyer 3"></a>
+    </div>
+  </section>
+
+  <section id="banners">
+    <h2>Banner Designs</h2>
+    <div class="gallery-grid">
+      <a href="assets/images/banners/BANNER1.jpg" data-lightbox="banners"><img src="assets/images/banners/BANNER1.jpg" alt="Banner 1"></a>
+      <a href="assets/images/banners/BANNER2.jpg" data-lightbox="banners"><img src="assets/images/banners/BANNER2.jpg" alt="Banner 2"></a>
+    </div>
+  </section>
+
+  <section id="merch">
+    <h2>Merchandise Designs</h2>
+    <div class="gallery-grid">
+      <a href="assets/images/merch/MERCH1.jpg" data-lightbox="merch"><img src="assets/images/merch/MERCH1.jpg" alt="Merch 1"></a>
+      <a href="assets/images/merch/MERCH2.jpg" data-lightbox="merch"><img src="assets/images/merch/MERCH2.jpg" alt="Merch 2"></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Contact: <a href="mailto:ameenyusuf005@gmail.com">ameenyusuf005@gmail.com</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+        }
+      });
+    });
+    document.querySelectorAll('h2').forEach(h => observer.observe(h));
+  </script>
+</body>
+</html>
