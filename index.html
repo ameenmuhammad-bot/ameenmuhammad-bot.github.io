@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Ameen's Portfolio - Graphic Design, Visual Communication & Creative Projects" />
+  <meta property="og:title" content="Muhammad Ameen - Portfolio" />
+  <meta property="og:description" content="Showcasing logo, flyer, banner, and merchandise design works." />
+  <meta property="og:type" content="website" />
+  <title>Muhammad Ameen - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #1e293b, #0f172a);
+      color: #f8fafc;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.light-mode {
+      background: linear-gradient(to right, #f9f9f9, #f1f5f9);
+      color: #1f2937;
+    }
+    header, footer, section {
+      padding: 2rem;
+      text-align: center;
+    }
+    h1, h2, h3 {
+      color: #facc15;
+      margin-bottom: 1rem;
+    }
+    section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    section.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .skills, .projects, .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .card, .gallery img {
+      background: linear-gradient(to bottom right, #6b21a8, #9333ea);
+      border-radius: 16px;
+      padding: 1rem;
+      width: 220px;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    body.light-mode .card {
+      background: #ede9fe;
+      color: #1e1e2f;
+    }
+    .card:hover, .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+    .gallery img {
+      object-fit: cover;
+      padding: 0;
+    }
+    button, input, textarea {
+      padding: 0.7rem 1.2rem;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+    }
+    button {
+      background: linear-gradient(to right, #fb7185, #f43f5e);
+      color: white;
+      cursor: pointer;
+      margin: 0.5rem;
+    }
+    button:hover {
+      background: linear-gradient(to right, #f43f5e, #be123c);
+    }
+    input, textarea {
+      width: 100%;
+      max-width: 400px;
+      margin: 0.5rem auto;
+      display: block;
+      background: #f1f5f9;
+      color: #111827;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      color: #38bdf8;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("light-mode");
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Muhammad Ameen</h1>
+    <p>Graphics Designer | Visual Communicator | Student Engineer</p>
+    <lottie-player src="https://lottie.host/181a41f0-1d8b-44b9-a1b1-52dfbb9fa496/UhIqAyDiC6.json" background="transparent" speed="1" style="width: 200px; height: 200px; margin: auto;" loop autoplay></lottie-player>
+    <button onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+  </header>
+  <section><h2>About Me</h2><p>I'm a passionate graphics designer based in Ilorin, Nigeria. I specialize in visual storytelling and brand design. I study Agricultural and Biosystems Engineering and love combining creativity with technology.</p></section>
+  <section><h2>Skills</h2><div class="skills"><div class="card">CorelDRAW</div><div class="card">Brand Identity Design</div><div class="card">Poster & Flyer Design</div><div class="card">Social Media Graphics</div><div class="card">Basic Web Design Concepts</div><div class="card">Typography & Layout</div><div class="card">Creative Problem Solving</div><div class="card">Strong Communication</div></div></section>
+  <section><h2>Projects</h2><div class="projects"><div class="card">Branding Project</div><div class="card">Event Flyer</div><div class="card">Social Media Ad</div><div class="card">Logo Redesign</div><div class="card">Poster Design</div><div class="card">Typography Project</div></div></section>
+  <section id="gallery">
+  <h2>Gallery</h2>
+
+  <h3>Logos Designs</h3>
+  <div class="gallery">
+    <a href="assets/images/logos/IMG-20250422-WA0097.jpg" data-lightbox="logos"><img src="assets/images/logos/IMG-20250422-WA0097.jpg" alt="logos sample"></a>
+    <a href="assets/images/logos/IMG-20250421-WA0083.jpg" data-lightbox="logos"><img src="assets/images/logos/IMG-20250421-WA0083.jpg" alt="logos sample"></a>
+    <a href="assets/images/logos/Screenshot_20250501-151713_1.png" data-lightbox="logos"><img src="assets/images/logos/Screenshot_20250501-151713_1.png" alt="logos sample"></a>
+    <a href="assets/images/logos/City Building Vector Images (over 370,000).jpeg" data-lightbox="logos"><img src="assets/images/logos/City Building Vector Images (over 370,000).jpeg" alt="logos sample"></a>
+  </div>
+  <h3>Flyers Designs</h3>
+  <div class="gallery">
+    <a href="assets/images/flyers/531e767ffbb4b8299e170002cf0a879b.jpg" data-lightbox="flyers"><img src="assets/images/flyers/531e767ffbb4b8299e170002cf0a879b.jpg" alt="flyers sample"></a>
+    <a href="assets/images/flyers/16e4b4296719018df20f71b771cbdaac.jpg" data-lightbox="flyers"><img src="assets/images/flyers/16e4b4296719018df20f71b771cbdaac.jpg" alt="flyers sample"></a>
+    <a href="assets/images/flyers/cc62462bc5965328e6a8d7fbf6f6a9d5.jpg" data-lightbox="flyers"><img src="assets/images/flyers/cc62462bc5965328e6a8d7fbf6f6a9d5.jpg" alt="flyers sample"></a>
+    <a href="assets/images/flyers/d6e2f4e2fcd3f71e536066e0fa68494a.jpg" data-lightbox="flyers"><img src="assets/images/flyers/d6e2f4e2fcd3f71e536066e0fa68494a.jpg" alt="flyers sample"></a>
+  </div>
+  <h3>Banners Designs</h3>
+  <div class="gallery">
+    <a href="assets/images/banners/cbf3b3e18ff1dc4bd255265519862422.jpg" data-lightbox="banners"><img src="assets/images/banners/cbf3b3e18ff1dc4bd255265519862422.jpg" alt="banners sample"></a>
+    <a href="assets/images/banners/2ce020e929efb64079e60158d403bc09.jpg" data-lightbox="banners"><img src="assets/images/banners/2ce020e929efb64079e60158d403bc09.jpg" alt="banners sample"></a>
+    <a href="assets/images/banners/79a59430759b17a57b611b6757834f20.jpg" data-lightbox="banners"><img src="assets/images/banners/79a59430759b17a57b611b6757834f20.jpg" alt="banners sample"></a>
+    <a href="assets/images/banners/be512dd92e7ff9413ef6ff6ffd2edfdd.jpg" data-lightbox="banners"><img src="assets/images/banners/be512dd92e7ff9413ef6ff6ffd2edfdd.jpg" alt="banners sample"></a>
+  </div>
+  <h3>Merch Designs</h3>
+  <div class="gallery">
+    <a href="assets/images/merch/68f4cb7b8cc1de88d46ca13375a3e62a.jpg" data-lightbox="merch"><img src="assets/images/merch/68f4cb7b8cc1de88d46ca13375a3e62a.jpg" alt="merch sample"></a>
+    <a href="assets/images/merch/beb19471818601a2ab05286481a80c99.jpg" data-lightbox="merch"><img src="assets/images/merch/beb19471818601a2ab05286481a80c99.jpg" alt="merch sample"></a>
+    <a href="assets/images/merch/0b50ef1b3ed454ea31d8f468af1e8111.jpg" data-lightbox="merch"><img src="assets/images/merch/0b50ef1b3ed454ea31d8f468af1e8111.jpg" alt="merch sample"></a>
+    <a href="assets/images/merch/4629d0f3f12d98783d64eae9edd24fd8.jpg" data-lightbox="merch"><img src="assets/images/merch/4629d0f3f12d98783d64eae9edd24fd8.jpg" alt="merch sample"></a>
+  </div>
+</section>
+  <section><h2>Testimonials</h2><div class="gallery"><div class="card">“Ameen delivered outstanding branding work for our business.” – Client A</div><div class="card">“Very creative and professional. Highly recommend!” – Client B</div></div></section>
+  <section><h2>Certifications</h2><ul style="list-style: none;"><li>Graphic Design Masterclass – Udemy</li><li>Branding Fundamentals – Coursera</li></ul></section>
+  <section><h2>Insights</h2><div class="gallery"><div class="card">How Typography Shapes Brand Perception</div><div class="card">Balancing Creativity and Engineering Logic</div></div></section>
+  <section><h2>FAQ</h2><div class="gallery"><div class="card">Q: What’s your typical project turnaround time?<br>A: 3–5 days for most graphic design projects.</div><div class="card">Q: Do you offer custom pricing?<br>A: Yes, I provide quotes based on project scope.</div></div></section>
+  <section><h2>Contact</h2><form action="https://formspree.io/f/mnqegrlv" method="POST"><input type="text" name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required><textarea name="message" rows="4" placeholder="Your Message" required></textarea><button type="submit">Send Message</button></form></section>
+  <footer><p>Email: <a href="mailto:ameenyusuf005@gmail.com">ameenyusuf005@gmail.com</a></p><p>Phone: <a href="tel:+2347062371352">+2347062371352</a></p><div class="social-icons"><a href="https://linkedin.com/in/ameen-yusuf-844543312">LinkedIn</a><a href="mailto:ameenyusuf005@gmail.com">Email</a><a href="https://wa.me/2347062371352">WhatsApp</a></div></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
