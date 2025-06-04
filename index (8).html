@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ameen Muhammad | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header sticky">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="mode-toggle">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" data-aos="fade-in">
+      <h1>Hello, I'm Ameen Muhammad</h1>
+      <p>A passionate graphics designer crafting visual stories through design.</p>
+      <a href="#contact" class="cta-button">Hire Me</a>
+    </section>
+
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>I’m Ameen Muhammad, a passionate graphics designer who loves combining creativity with technology. My goal is to craft visuals that speak.</p>
+    </section>
+
+    <section id="skills" data-aos="fade-right">
+      <h2>My Skills</h2>
+      <ul>
+        <li>CorelDRAW</li>
+        <li>Brand identity design</li>
+        <li>Poster & flyer design</li>
+        <li>Social media graphics</li>
+        <li>Basic web design concepts</li>
+        <li>Typography & Layout</li>
+        <li>Creative problem solving</li>
+        <li>Strong communication</li>
+      </ul>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <ul>
+        <li>Branding project</li>
+        <li>Event flyer</li>
+        <li>Social media ad</li>
+        <li>Logo design & redesign</li>
+        <li>Poster design</li>
+        <li>Typography project</li>
+      </ul>
+      <div class="project-gallery">
+        <img src="images/logo1.png" alt="Logo Design" />
+        <img src="images/flyer1.png" alt="Flyer Design" />
+        <img src="images/poster1.png" alt="Poster Design" />
+        <img src="images/social1.png" alt="Social Media Design" />
+      </div>
+    </section>
+
+    <section id="testimonials" data-aos="fade-up">
+      <h2>What Clients Say</h2>
+      <blockquote>“Ameen is professional and creative. Always delivers high-quality designs.”</blockquote>
+      <blockquote>“Excellent work. Fast, responsive, and reliable!”</blockquote>
+    </section>
+
+    <section id="stats" data-aos="zoom-in">
+      <h2>Project Stats</h2>
+      <ul>
+        <li><strong>50+</strong> Projects Completed</li>
+        <li><strong>25+</strong> Satisfied Clients</li>
+        <li><strong>4+</strong> Years of Experience</li>
+      </ul>
+    </section>
+
+    <section id="certifications" data-aos="fade-up">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Graphics Design Masterclass - Udemy</li>
+        <li>Branding Fundamentals - Coursera</li>
+      </ul>
+    </section>
+
+    <section id="faq" data-aos="fade-left">
+      <h2>FAQ</h2>
+      <p><strong>Q: What tools do you use?</strong><br>A: Mostly CorelDRAW and web-based tools.</p>
+      <p><strong>Q: Can I hire you for freelance work?</strong><br>A: Yes! Use the contact form or message me via WhatsApp.</p>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/mwpogzjz" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p>Email: ameenyusuf005@gmail.com</p>
+      <p>WhatsApp: <a href="https://wa.me/2347062371352">Chat on WhatsApp</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ameen-muhammad-844543312">Connect</a></p>
+      <a href="assets/Resume_AmeenMuhammad.pdf" download class="resume-button">Download Resume</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ameen Muhammad. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+    const toggleBtn = document.getElementById('mode-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+</body>
+</html>
